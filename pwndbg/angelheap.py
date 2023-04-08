@@ -310,9 +310,9 @@ def getarch():
     global capsize
     global word
     global arch
-    capsize = pwndbg.arch.ptrsize
+    capsize = pwndbg.gdblib.arch.ptrsize
     word = "gx " if capsize == 8 else "x "
-    arch = pwndbg.arch.current
+    arch = pwndbg.gdblib.arch.current
     return arch
 
 def libcbase():
